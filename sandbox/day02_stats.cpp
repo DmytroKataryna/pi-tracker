@@ -1,7 +1,17 @@
 #include <iostream>
 #include <vector>
+#include <algorithm> 
 
-// Читає всі числа зі стандартного вводу (std::cin), поки вони є
+double median(std::vector<double> values) {
+    std::sort(values.begin(), values.end());
+    const std::size_t middle = values.size() / 2;
+
+    if (values.size() % 2 == 1) {
+        return values[middle];                                // непарна кількість
+    }
+    return (values[middle - 1] + values[middle]) / 2.0;       // парна кількість
+}
+
 std::vector<double> readValues()
 {
     std::vector<double> values;
