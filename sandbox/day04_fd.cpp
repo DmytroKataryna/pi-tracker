@@ -7,7 +7,6 @@
 #include <fcntl.h>  // open, O_RDONLY (системні виклики Linux, C API)
 #include <unistd.h> // read, close
 
-// Власник файлового дескриптора: відкриває в конструкторі, закриває в деструкторі
 class Fd
 {
 public:
