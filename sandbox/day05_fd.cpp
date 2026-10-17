@@ -56,7 +56,6 @@ public:
         }
     }
 
-    // Забороняємо копіювати (пояснення нижче)
     Fd(const Fd &) = delete;
     Fd &operator=(const Fd &) = delete;
 

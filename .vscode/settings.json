@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "/home/rasp001/pi-tracker"
+    "cmake.sourceDirectory": "/home/rasp001/pi-tracker",
+     "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json"
 }
