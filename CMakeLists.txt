@@ -10,6 +10,7 @@ add_compile_options(-Wall -Wextra -Wpedantic -Wconversion)
 add_library(pitracker
     src/fd.cpp
     src/i2c_device.cpp
+    src/imu.cpp
 )
 
 target_link_libraries(pitracker PUBLIC Threads::Threads)

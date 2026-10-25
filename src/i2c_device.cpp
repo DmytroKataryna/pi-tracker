@@ -34,7 +34,6 @@ namespace pi_tracker
 
     void I2cDevice::readRegisters(std::uint8_t startRegister, std::span<std::uint8_t> out) const
     {
-        // Два повідомлення = рівно та послідовність з Частини 1:
         std::array<i2c_msg, 2> messages{{
             // 1) START → [адреса + W] → [номер регістра]
             {m_address, 0, 1, &startRegister},

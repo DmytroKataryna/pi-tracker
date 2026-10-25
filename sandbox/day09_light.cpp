@@ -1,13 +1,13 @@
 #include "pi_tracker/i2c_device.h"
 
-#include <thread> // Для std::this_thread::sleep_for
-#include <chrono> // Для std::chrono::milliseconds та літералу 'ms'
+#include <thread>
+#include <chrono> 
 
-using namespace std::chrono_literals; // Дозволяє писати 180ms замість std::chrono::milliseconds(180)
+using namespace std::chrono_literals; 
 
 #include <array>
 #include <cstdint>
-#include <format> // std::format (C++20), як String.format у Java
+#include <format> 
 #include <iostream>
 
 namespace bh1750
