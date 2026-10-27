@@ -11,6 +11,8 @@ add_library(pitracker
     src/fd.cpp
     src/i2c_device.cpp
     src/imu.cpp
+    src/serial_port.cpp
+    src/tf_luna.cpp
 )
 
 target_link_libraries(pitracker PUBLIC Threads::Threads)
