@@ -21,7 +21,7 @@ namespace pi_tracker
     {
         if (this == &other)
         {
-            return other;
+            return *this;
         }
         if (this->m_fd >= 0)
         {

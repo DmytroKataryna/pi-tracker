@@ -13,12 +13,17 @@ add_library(pitracker
     src/imu.cpp
     src/serial_port.cpp
     src/tf_luna.cpp
+    src/udp_sender.cpp
 )
 
 target_link_libraries(pitracker PUBLIC Threads::Threads)
 target_include_directories(pitracker PUBLIC include)
 
 add_executable(hello src/main.cpp)
+
+add_executable(sensord apps/sensord.cpp)
+
+target_link_libraries(sensord PRIVATE pitracker)
 
 file(GLOB SANDBOX_SOURCES CONFIGURE_DEPENDS sandbox/*.cpp)
 foreach(src ${SANDBOX_SOURCES})

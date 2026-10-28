@@ -13,6 +13,8 @@ namespace pi_tracker
         explicit Fd(const char *path, int flags = O_RDONLY);
         ~Fd();
 
+        explicit Fd(int fd) noexcept : m_fd{fd} {} // бере у володіння вже відкритий дескриптор
+        
         Fd(const Fd &) = delete;
         Fd &operator=(const Fd &) = delete;
         Fd(Fd &&other) noexcept;
