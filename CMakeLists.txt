@@ -33,3 +33,5 @@ foreach(src ${SANDBOX_SOURCES})
 endforeach()
 
 target_sources(ch2_8_files PRIVATE sandbox/helper/ch2_8_get_integer.cpp)
+
+install(TARGETS sensord RUNTIME DESTINATION bin)

@@ -1,0 +1,18 @@
+[Unit]
+Description=pi-tracker sensor daemon (IMU + lidar -> UDP)
+# Стартувати після того, як з'явилась мережа
+After=network-online.target
+Wants=network-online.target
+# Перезапускати без обмеження кількості спроб: на дроні нікому натиснути restart
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=rasp001
+EnvironmentFile=/etc/default/sensord
+ExecStart=/usr/local/bin/sensord ${SENSORD_HOST} ${SENSORD_PORT}
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
