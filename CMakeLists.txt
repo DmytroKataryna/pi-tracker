@@ -14,6 +14,7 @@ add_library(pitracker
     src/serial_port.cpp
     src/tf_luna.cpp
     src/udp_sender.cpp
+    src/yuv420.cpp
 )
 
 target_link_libraries(pitracker PUBLIC Threads::Threads)
